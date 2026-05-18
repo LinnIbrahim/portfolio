@@ -4,6 +4,7 @@ import Reveal from './components/Reveal'
 import BionicText from './components/BionicText'
 import ColorFilters from './components/ColorFilters'
 import AccessibilityPanel from './components/AccessibilityPanel'
+import EasterEggs, { summonPup } from './components/EasterEggs'
 import { A11yProvider, useA11y } from './a11y/A11yProvider'
 
 function Hero() {
@@ -341,10 +342,19 @@ function Footer() {
         © {new Date().getFullYear()} · Designed &amp; built for the one, not the
         aggregate.
       </span>
-      <span>
+      <span className="footer-end">
         <a href={`mailto:${c.email}`} style={{ color: 'var(--sage-deep)' }}>
           {c.email}
         </a>
+        <button
+          type="button"
+          className="footer-paw"
+          aria-label="A small nook — say hello to the emetour pup"
+          title="psst…"
+          onClick={summonPup}
+        >
+          <img src="/mascot.jpg" alt="" aria-hidden="true" />
+        </button>
       </span>
     </footer>
   )
@@ -377,6 +387,7 @@ export default function App() {
       <ColorFilters />
       <Site />
       <AccessibilityPanel />
+      <EasterEggs />
     </A11yProvider>
   )
 }

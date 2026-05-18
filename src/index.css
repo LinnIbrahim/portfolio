@@ -470,13 +470,16 @@ p {
 }
 
 .work-shot {
+  position: relative;
   margin-bottom: 1.8rem;
   max-width: 100%;
-  border-radius: 7px;
+  border-radius: 12px;
   overflow: hidden;
-  border: 1px solid var(--line);
-  background: var(--cream-deep);
-  box-shadow: 0 18px 40px -28px rgba(26, 26, 24, 0.4);
+  background: var(--cream);
+  /* soft warm lift, not a hard white card */
+  box-shadow:
+    0 2px 0 rgba(26, 26, 24, 0.04),
+    0 30px 60px -42px rgba(26, 26, 24, 0.26);
 }
 .work-shot img {
   display: block;
@@ -484,13 +487,35 @@ p {
   height: auto;
   aspect-ratio: 16 / 9;
   object-fit: cover;
-  transition: transform 0.7s var(--ease);
+  /* tame glaring whites so the shot sits in the cream, not on it */
+  filter: saturate(0.9) contrast(0.92) brightness(1.015);
+  transition:
+    transform 0.7s var(--ease),
+    filter 0.5s ease;
+}
+/* feather the rectangle edges into the page background */
+.work-shot::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 1px rgba(26, 26, 24, 0.05);
+  background: radial-gradient(
+    118% 130% at 50% 26%,
+    transparent 60%,
+    color-mix(in srgb, var(--cream) 46%, transparent) 100%
+  );
 }
 .work-item:hover .work-shot img {
-  transform: scale(1.025);
+  transform: scale(1.02);
+  /* gently "wake up" on hover */
+  filter: saturate(0.98) contrast(0.97) brightness(1.005);
 }
 .work-item.is-featured .work-shot {
-  box-shadow: 0 26px 56px -30px rgba(26, 26, 24, 0.5);
+  box-shadow:
+    0 2px 0 rgba(26, 26, 24, 0.04),
+    0 40px 80px -46px rgba(26, 26, 24, 0.32);
 }
 
 /* ── Two-column generic (experience / skills) ──────────────── */
@@ -681,6 +706,138 @@ p {
 .footer .nav-mark {
   font-size: 1rem;
   color: var(--ink);
+}
+
+/* ── Footer nook: the pup ── */
+.footer-end {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+.footer-paw {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--cream-deep);
+  cursor: pointer;
+  opacity: 0.35;
+  filter: grayscale(0.4);
+  transition:
+    opacity 0.35s ease,
+    filter 0.35s ease,
+    transform 0.35s var(--ease);
+}
+.footer-paw img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.footer-paw:hover,
+.footer-paw:focus-visible {
+  opacity: 1;
+  filter: grayscale(0);
+  transform: rotate(-6deg) scale(1.08);
+}
+
+/* ── Easter-egg reveal ── */
+.egg-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+  background: color-mix(in srgb, var(--ink) 52%, transparent);
+  backdrop-filter: blur(4px);
+  animation: egg-fade 0.3s var(--ease);
+}
+.egg-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 560px;
+  width: 100%;
+  background: var(--cream);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 40px 90px -40px rgba(26, 26, 24, 0.6);
+  animation: egg-rise 0.45s var(--ease);
+}
+@media (min-width: 560px) {
+  .egg-card {
+    grid-template-columns: 0.9fr 1.1fr;
+  }
+}
+.egg-mascot {
+  position: relative;
+  background: var(--cream-deep);
+}
+.egg-mascot img {
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  object-fit: cover;
+  filter: saturate(0.94) contrast(0.95);
+}
+.egg-mascot::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    100deg,
+    transparent 55%,
+    color-mix(in srgb, var(--cream) 70%, transparent) 100%
+  );
+}
+.egg-body {
+  padding: clamp(1.5rem, 4vw, 2.4rem);
+  align-self: center;
+}
+.egg-kicker {
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--sage-deep);
+  margin-bottom: 0.7rem;
+}
+.egg-body h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+}
+.egg-body p {
+  color: var(--ink-soft);
+  font-size: 0.98rem;
+  margin-bottom: 1.5rem;
+}
+.egg-body a {
+  color: var(--sage-deep);
+  border-bottom: 1px solid var(--sage);
+}
+
+@keyframes egg-fade {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes egg-rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.97);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .egg-overlay,
+  .egg-card {
+    animation: none;
+  }
+  .footer-paw {
+    transition: none;
+  }
 }
 
 /* ─────────────────────────────────────────────────────────────
