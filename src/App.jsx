@@ -1,6 +1,10 @@
 import { profile } from './data/profile'
 import Nav from './components/Nav'
 import Reveal from './components/Reveal'
+import BionicText from './components/BionicText'
+import ColorFilters from './components/ColorFilters'
+import AccessibilityPanel from './components/AccessibilityPanel'
+import { A11yProvider, useA11y } from './a11y/A11yProvider'
 
 function Hero() {
   return (
@@ -14,7 +18,7 @@ function Hero() {
         I build for the people usually <em>designed&nbsp;around</em>.
       </Reveal>
       <Reveal as="p" className="hero-sub" delay={160}>
-        {profile.intro}
+        <BionicText>{profile.intro}</BionicText>
       </Reveal>
       <Reveal className="btn-row" delay={220}>
         <a className="btn" href="#work">
@@ -89,7 +93,9 @@ function Work() {
                     {w.href && <span className="arrow">↗</span>}
                   </h3>
                   <p className="work-kind">{w.kind}</p>
-                  <p className="work-blurb">{w.blurb}</p>
+                  <p className="work-blurb">
+                    <BionicText>{w.blurb}</BionicText>
+                  </p>
                   {w.href && (
                     <span className="work-link">{w.linkLabel}</span>
                   )}
@@ -145,7 +151,7 @@ function About() {
           <div className="about-body" style={{ marginTop: '2.4rem' }}>
             {profile.about.map((para, i) => (
               <Reveal as="p" key={i} delay={i * 70}>
-                {para}
+                <BionicText>{para}</BionicText>
               </Reveal>
             ))}
           </div>
@@ -206,7 +212,9 @@ function Path() {
                 <p className="tl-period">{e.period}</p>
                 <ul className="tl-points">
                   {e.points.map((p) => (
-                    <li key={p}>{p}</li>
+                    <li key={p}>
+                      <BionicText>{p}</BionicText>
+                    </li>
                   ))}
                 </ul>
               </Reveal>
@@ -260,12 +268,16 @@ function Community() {
           </p>
           <ul className="tl-points" style={{ marginTop: '1.2rem' }}>
             {h.points.map((p) => (
-              <li key={p}>{p}</li>
+              <li key={p}>
+                <BionicText>{p}</BionicText>
+              </li>
             ))}
           </ul>
           <p className="human-note">
-            Building inclusive communities is the same discipline as building
-            good software: notice who gets designed around, and stop doing it.
+            <BionicText>
+              Building inclusive communities is the same discipline as building
+              good software: notice who gets designed around, and stop doing it.
+            </BionicText>
           </p>
         </Reveal>
       </div>
@@ -338,11 +350,15 @@ function Footer() {
   )
 }
 
-export default function App() {
+function Site() {
+  const { pageClassName } = useA11y()
   return (
-    <>
+    <div id="page" className={pageClassName}>
+      <a className="skip-link" href="#main">
+        Skip to content
+      </a>
       <Nav />
-      <main>
+      <main id="main">
         <Hero />
         <Work />
         <About />
@@ -351,6 +367,16 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
-    </>
+    </div>
+  )
+}
+
+export default function App() {
+  return (
+    <A11yProvider>
+      <ColorFilters />
+      <Site />
+      <AccessibilityPanel />
+    </A11yProvider>
   )
 }
