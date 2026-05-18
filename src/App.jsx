@@ -73,6 +73,11 @@ function Work() {
                         loading="lazy"
                         width="1200"
                         height="675"
+                        style={
+                          w.imagePosition
+                            ? { objectPosition: w.imagePosition }
+                            : undefined
+                        }
                       />
                     </figure>
                   )}

@@ -40,9 +40,10 @@ export const profile = {
         'An online travel agency rebuilt around a human-centric thesis: design the trip for the individual traveller — the 1% — rather than the statistical average. I led product development and the technical migration, deploying in-house OTA software, AI models, and a recommendation system that treats taste as personal, not demographic.',
       tags: ['React', 'Node.js', 'AI / Recsys', 'Product', 'ERP (Odoo)'],
       featured: true,
-      // Swap for a real screenshot: drop a file in public/work/ and point here.
-      image: '/work/eme.svg',
-      imageAlt: 'EME Tour — a personal itinerary connecting destinations',
+      image: '/work/eme.jpg',
+      imageAlt:
+        'EME Tour landing page — “Your perfect trip, designed by you”, a free multi-country itinerary planner',
+      imagePosition: 'top center',
     },
     {
       title: 'FindAnything',
