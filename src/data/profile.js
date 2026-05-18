@@ -133,13 +133,12 @@ export const profile = {
   },
 
   // ── Contact / links ──────────────────────────────────────────
-  // TODO: replace the github & linkedin URLs with your real ones.
   contact: {
     email: 'linn.ibrahim@outlook.com',
     github: 'https://github.com/LinnIbrahim',
     githubLabel: 'github.com/LinnIbrahim',
-    linkedin: 'https://www.linkedin.com/in/your-handle',
-    linkedinLabel: 'linkedin.com/in/your-handle',
+    linkedin: 'https://www.linkedin.com/in/linibrahim/',
+    linkedinLabel: 'linkedin.com/in/linibrahim',
     cv: '/Lin_Ibrahim_CV.pdf',
   },
 }
