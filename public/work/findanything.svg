@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="FindAnything — one small business made visible on a quiet map">
+  <defs>
+    <radialGradient id="faGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#7d8c79" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#7d8c79" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="675" fill="#f4f1ea"/>
+
+  <!-- faint map grid -->
+  <g stroke="#1a1a18" stroke-opacity="0.07" stroke-width="1.5">
+    <path d="M0 135 H1200 M0 270 H1200 M0 405 H1200 M0 540 H1200"/>
+    <path d="M150 0 V675 M350 0 V675 M550 0 V675 M750 0 V675 M950 0 V675 M1100 0 V675"/>
+  </g>
+  <!-- a soft 'road' meander -->
+  <path d="M-20 470 C 200 430, 280 300, 520 300 S 820 360, 1220 250"
+        fill="none" stroke="#5c6a58" stroke-opacity="0.18" stroke-width="10" stroke-linecap="round"/>
+
+  <!-- overlooked generic markers -->
+  <g fill="#1a1a18" opacity="0.16">
+    <circle cx="230" cy="180" r="9"/>
+    <circle cx="940" cy="150" r="9"/>
+    <circle cx="1010" cy="470" r="9"/>
+    <circle cx="300" cy="540" r="9"/>
+    <circle cx="760" cy="540" r="9"/>
+    <circle cx="170" cy="380" r="9"/>
+  </g>
+
+  <!-- the one that finally shows up -->
+  <circle cx="600" cy="330" r="150" fill="url(#faGlow)"/>
+  <circle cx="600" cy="330" r="74" fill="none" stroke="#7d8c79" stroke-width="2" opacity="0.5"/>
+  <g transform="translate(600 322)">
+    <path d="M0 -56 C 30 -56 50 -36 50 -8 C 50 24 0 70 0 70 C 0 70 -50 24 -50 -8 C -50 -36 -30 -56 0 -56 Z" fill="#5c6a58"/>
+    <circle cy="-8" r="17" fill="#f4f1ea"/>
+  </g>
+
+  <text x="96" y="112" font-family="Georgia, 'Times New Roman', serif" font-size="42" fill="#1a1a18">FindAnything</text>
+  <text x="98" y="150" font-family="Georgia, serif" font-style="italic" font-size="23" fill="#5c6a58">the small shop, finally on the map</text>
+</svg>

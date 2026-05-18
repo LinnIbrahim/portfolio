@@ -65,6 +65,17 @@ function Work() {
                   <span className="yr">{w.year}</span>
                 </div>
                 <div className="work-main">
+                  {w.image && (
+                    <figure className="work-shot">
+                      <img
+                        src={w.image}
+                        alt={w.imageAlt || w.title}
+                        loading="lazy"
+                        width="1200"
+                        height="675"
+                      />
+                    </figure>
+                  )}
                   {w.featured && (
                     <span className="featured-flag">Featured</span>
                   )}

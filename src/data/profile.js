@@ -40,6 +40,9 @@ export const profile = {
         'An online travel agency rebuilt around a human-centric thesis: design the trip for the individual traveller — the 1% — rather than the statistical average. I led product development and the technical migration, deploying in-house OTA software, AI models, and a recommendation system that treats taste as personal, not demographic.',
       tags: ['React', 'Node.js', 'AI / Recsys', 'Product', 'ERP (Odoo)'],
       featured: true,
+      // Swap for a real screenshot: drop a file in public/work/ and point here.
+      image: '/work/eme.svg',
+      imageAlt: 'EME Tour — a personal itinerary connecting destinations',
     },
     {
       title: 'FindAnything',
@@ -51,6 +54,8 @@ export const profile = {
         'An open-source platform making small, easily-overlooked businesses visible on the map. The aggregate favours the chains; FindAnything is built so the corner shop shows up too — mapping integration, containerised, and community-run.',
       tags: ['Docker', 'Kubernetes', 'OpenStreetMap', 'Open Source'],
       featured: false,
+      image: '/work/findanything.svg',
+      imageAlt: 'FindAnything — one small business made visible on a quiet map',
     },
     {
       title: 'Point-Cloud AI Pipeline',
@@ -62,6 +67,8 @@ export const profile = {
         'Led integration of deep neural networks into a production data pipeline, lifting processing accuracy from 90% to 98% and enabling real-time analytics over 10+ TB point-cloud datasets. Containerised a C++ / CMake PyTorch classification model with Docker.',
       tags: ['Python', 'PyTorch', 'Docker', 'Data Pipelines'],
       featured: false,
+      image: '/work/pointcloud.svg',
+      imageAlt: 'Point-Cloud AI Pipeline — noisy data resolving into a classified signal',
     },
   ],
 
