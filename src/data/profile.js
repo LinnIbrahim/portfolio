@@ -6,19 +6,21 @@
 export const profile = {
   name: 'Lin Ibrahim',
   initials: 'LI',
-  roles: ['Website Designer', 'Software Engineer', 'Humanitarian'],
+  roles: ['Founder & Technical Lead', 'Engineer & Designer', 'Humanitarian'],
   location: 'Gent, Belgium',
 
   // Hero
   tagline:
-    'I build human-centric software for the one — not the aggregate.',
+    'Creating software for the people — and making the community safer for everyone.',
   intro:
-    'Full-stack engineer and product builder who designs for the person at the edge of the spreadsheet, not the average in the middle of it. The 1% you usually round away is exactly who I design for.',
+    'Founder and technical lead who builds software that serves people, not averages. I work where technology meets impact: tourism that fits every background and budget, communities that are safer for everyone, and the one person the spreadsheet rounds away.',
+  openTo: 'Open to founding-team, product & impact-driven work',
 
-  // About
+  // About — in my own words
   about: [
-    'I’m a full-stack engineer with hands-on experience across data engineering, product development, and the unglamorous craft of good technical documentation. I’ve taken data pipelines from 90% to 98% processing accuracy and shipped in-house software, AI models, and recommendation systems for a live online travel agency.',
-    'What ties my work together is a stubborn belief: the aggregate hides the people who need design the most. I optimise for the traveller, the small business, the person walking into a space hoping it’s safe for them — and trust that building well for them builds well for everyone.',
+    'I want to create impact in today’s society and give back what I’ve learnt — by empowering technology to serve people, not the other way round.',
+    'As Founder & Technical Lead at EME, that impact lives in tourism: an intersection of tradition and modernity that helps everyone enjoy their vacation, whatever their background or budget — because everyone deserves to travel.',
+    'Beyond product, I teach, research the human side of AI, and volunteer to make my community safer for everyone. Risk, sustainability, project management, people — that work matters to me as much as the code does.',
   ],
 
   languages: [
@@ -32,13 +34,13 @@ export const profile = {
   work: [
     {
       title: 'EME Tour',
-      kind: 'Product · Full-Stack · Recommendation Systems',
+      kind: 'Founder & Technical Lead · Product · AI',
       year: '2023 — Present',
       href: 'https://emetour.com',
       linkLabel: 'emetour.com',
       blurb:
-        'An online travel agency rebuilt around a human-centric thesis: design the trip for the individual traveller — the 1% — rather than the statistical average. I led product development and the technical migration, deploying in-house OTA software, AI models, and a recommendation system that treats taste as personal, not demographic.',
-      tags: ['React', 'Node.js', 'AI / Recsys', 'Product', 'ERP (Odoo)'],
+        'A travel platform built on a human-centric thesis: design the trip for the individual — whatever their background or budget — rather than the statistical average. As founder and technical lead I drive product, the technical migration, and an in-house OTA stack with AI models and a recommendation system that treats taste as personal, not demographic.',
+      tags: ['Product', 'React', 'Node.js', 'AI / Recsys', 'Leadership'],
       featured: true,
       image: '/work/eme.jpg',
       imageAlt:
@@ -59,6 +61,19 @@ export const profile = {
       imageAlt: 'FindAnything — one small business made visible on a quiet map',
     },
     {
+      title: 'Echo',
+      kind: 'Open Source · Developer Tooling',
+      year: '2025 — 2026',
+      href: 'https://github.com/MiguelIbrahimE/echo',
+      linkLabel: 'github.com/MiguelIbrahimE/echo',
+      blurb:
+        'Open-source software that writes and maintains documentation automatically. Good docs are how a project includes the next person, not just its authors — Echo lowers the cost of being understood.',
+      tags: ['Open Source', 'Automation', 'Documentation', 'Git'],
+      featured: false,
+      image: '/work/echo.svg',
+      imageAlt: 'Echo — a single source rippling out into generated documentation',
+    },
+    {
       title: 'Point-Cloud AI Pipeline',
       kind: 'Data Engineering · Kapernikov',
       year: '2025',
@@ -74,17 +89,17 @@ export const profile = {
     },
   ],
 
-  // Experience timeline
+  // Experience timeline — the whole arc, not just the code
   experience: [
     {
-      role: 'Full-Stack Engineer & Technical Migration',
+      role: 'Founder & Technical Lead',
       org: 'EME International SARL',
-      place: 'Remote',
+      place: 'Remote · Full-time',
       period: 'Sep 2023 — Present',
       points: [
-        'Lead product development and product management for a growing travel startup.',
-        'Deployed in-house software for an online travel agency, including AI models and recommendation systems.',
-        'Authored technical documentation, process guides, and training materials.',
+        'Founded and lead product, engineering and digital transformation for a travel startup.',
+        'Shipped in-house OTA software, AI models and recommendation systems.',
+        'Lead a small team and own product management, technical writing and training.',
       ],
     },
     {
@@ -98,47 +113,94 @@ export const profile = {
         'Enabled real-time analytics for 10+ TB point-cloud datasets.',
       ],
     },
+    {
+      role: 'IT Trainer',
+      org: 'Geek Express',
+      place: 'Remote · Part-time',
+      period: 'Nov 2022 — Jun 2023',
+      points: [
+        'Taught IT and programming, making technical concepts approachable for learners.',
+        'Customer support and troubleshooting through a teaching lens.',
+      ],
+    },
+    {
+      role: 'General Assistant (Teaching)',
+      org: 'Lebanese American University',
+      place: 'Beirut · On-site',
+      period: 'Jan 2021 — Jan 2023',
+      points: [
+        'Mentored generations of students through programming and its real-world uses.',
+      ],
+    },
+    {
+      role: 'Assistant Researcher (Intern)',
+      org: 'CISH — UNESCO, Byblos',
+      place: 'Jbeil · Hybrid',
+      period: 'Nov 2021 — Apr 2022',
+      points: [
+        'Researched AI and its effect on humanity — a volunteer-type research internship.',
+      ],
+    },
   ],
 
-  // Skills
+  // Skills — led by what I do, not just what I use
   skills: [
-    { group: 'Languages', items: ['Python', 'SQL', 'JavaScript', 'Java', 'C'] },
     {
-      group: 'Web & APIs',
-      items: ['React', 'Node.js', 'REST APIs', 'HTML / CSS'],
+      group: 'Leadership & Product',
+      items: [
+        'Founder Mindset',
+        'Technical Leadership',
+        'Product Management',
+        'Project Management',
+        'Consulting',
+        'Digital Transformation',
+      ],
     },
     {
-      group: 'Data & Analytics',
-      items: ['Dagster', 'PostgreSQL', 'Power BI', 'ETL / ELT', 'PyTorch'],
+      group: 'People & Impact',
+      items: [
+        'Teaching & Mentoring',
+        'Community Building',
+        'Human-centric Design',
+        'Sustainability',
+        'Risk Assessment',
+      ],
     },
     {
-      group: 'Cloud & DevOps',
-      items: ['Docker', 'Kubernetes', 'Azure DevOps', 'Git / GitHub', 'CI/CD'],
+      group: 'Engineering',
+      items: ['Python', 'JavaScript', 'React', 'Node.js', 'Java', 'C', 'SQL'],
     },
     {
-      group: 'Ways of Working',
-      items: ['Agile / SCRUM', 'Jira', 'ERP (Odoo)', 'Technical Writing'],
+      group: 'Data & AI',
+      items: ['Data Pipelines (Dagster)', 'PyTorch', 'PostgreSQL', 'ETL / ELT', 'Power BI'],
+    },
+    {
+      group: 'Cloud & Craft',
+      items: ['Docker', 'Kubernetes', 'CI/CD', 'Technical Writing', 'Agile / SCRUM'],
     },
   ],
 
-  // Humanitarian
+  // Community / humanitarian
   humanitarian: {
-    role: 'Core Team Lead',
-    org: 'Casa Rosa, Gent',
-    period: 'Feb 2026 — Present (Care Worker since Aug 2025)',
+    role: 'Core Volunteer',
+    org: 'Casa Rosa — Regenbooghuis, Gent',
+    period: 'Aug 2025 — Present · Human Rights 🏳️‍⚧️🏳️‍🌈',
     points: [
-      'Manage volunteers and hold a safe, inclusive space for the LGBTQ+ community.',
+      'Manage volunteers and hold a safe, inclusive space for LGBTQ+ and non-LGBTQ+ people alike.',
+      'Foster a community where people feel safer in their own city.',
       'Record and track KPIs to drive concrete organisational improvement.',
     ],
     note:
       'The same instinct that shapes my engineering shapes my volunteering: build for the person who is usually designed around.',
   },
 
-  // Education
+  // Education & credentials
   education: {
     degree: 'B.Sc. Computer Science — Minor in Sustainability & AI',
     school: 'Lebanese American University, Beirut',
-    detail: 'June 2023 · GPA 3.2 · NARIC-recognised · +30 ECTS at Ghent University',
+    detail: 'Jun 2023 · GPA 3.2 · NARIC-recognised',
+    also:
+      'Graduate coursework at Ghent University — Advanced ML, Distributed Systems, Cloud & Sustainable Computing. Certified: Stanford (Writing in the Sciences) · Google (IT Support).',
   },
 
   // ── Contact / links ──────────────────────────────────────────

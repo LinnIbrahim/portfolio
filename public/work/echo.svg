@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="Echo — a single source rippling out into generated documentation">
+  <defs>
+    <radialGradient id="echoGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#7d8c79" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#7d8c79" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="675" fill="#f4f1ea"/>
+
+  <!-- the source -->
+  <circle cx="300" cy="360" r="160" fill="url(#echoGlow)"/>
+  <g fill="none" stroke="#5c6a58" stroke-width="2.5">
+    <circle cx="300" cy="360" r="34" opacity="0.9"/>
+    <circle cx="300" cy="360" r="74" opacity="0.5"/>
+    <circle cx="300" cy="360" r="116" opacity="0.28"/>
+    <circle cx="300" cy="360" r="160" opacity="0.14"/>
+  </g>
+  <circle cx="300" cy="360" r="11" fill="#1a1a18"/>
+
+  <!-- ripple resolving into a generated document -->
+  <g transform="translate(620 188)">
+    <rect width="380" height="320" rx="14" fill="#ffffff" fill-opacity="0.55"
+          stroke="#1a1a18" stroke-opacity="0.12"/>
+    <g stroke-linecap="round" stroke-width="9">
+      <path d="M44 64 H210" stroke="#1a1a18" stroke-opacity="0.55"/>
+      <path d="M44 110 H300" stroke="#7d8c79"/>
+      <path d="M44 150 H260" stroke="#1a1a18" stroke-opacity="0.18"/>
+      <path d="M44 190 H312" stroke="#1a1a18" stroke-opacity="0.18"/>
+      <path d="M44 230 H188" stroke="#7d8c79" stroke-opacity="0.7"/>
+      <path d="M44 270 H300" stroke="#1a1a18" stroke-opacity="0.18"/>
+    </g>
+  </g>
+
+  <!-- connecting echo -->
+  <path d="M334 360 C 470 360, 520 348, 612 348"
+        fill="none" stroke="#5c6a58" stroke-width="3"
+        stroke-linecap="round" stroke-dasharray="2 13"/>
+
+  <text x="96" y="118" font-family="Georgia, 'Times New Roman', serif" font-size="42" fill="#1a1a18">Echo</text>
+  <text x="98" y="156" font-family="Georgia, serif" font-style="italic" font-size="23" fill="#5c6a58">docs that write themselves</text>
+</svg>

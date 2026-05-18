@@ -39,7 +39,7 @@ function Hero() {
           <i className="dot" />
           {profile.location}
         </span>
-        <span>Open to product &amp; full-stack roles</span>
+        <span>{profile.openTo}</span>
       </Reveal>
     </header>
   )
@@ -201,6 +201,11 @@ function Path() {
               {profile.education.detail}
             </span>
           </Reveal>
+          {profile.education.also && (
+            <Reveal as="p" delay={160} className="work-blurb edu-also">
+              <BionicText>{profile.education.also}</BionicText>
+            </Reveal>
+          )}
         </div>
         <div>
           <div className="timeline">
@@ -228,7 +233,7 @@ function Path() {
             delay={120}
             // visual gap before skills
           >
-            <span style={{ marginLeft: 0 }}>Toolkit</span>
+            <span style={{ marginLeft: 0 }}>Capabilities</span>
           </Reveal>
           <div className="skill-grid" style={{ marginTop: '0.5rem' }}>
             {profile.skills.map((s, i) => (
