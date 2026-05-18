@@ -56,6 +56,16 @@ a {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
+}
+
+/* Grid items default to min-width:auto, so an image's intrinsic
+   width can blow out its track. Opt every grid child out of that. */
+.about-grid > *,
+.split > *,
+.work-meta,
+.work-main {
+  min-width: 0;
 }
 
 ::selection {
@@ -461,6 +471,7 @@ p {
 
 .work-shot {
   margin-bottom: 1.8rem;
+  max-width: 100%;
   border-radius: 7px;
   overflow: hidden;
   border: 1px solid var(--line);
@@ -468,7 +479,9 @@ p {
   box-shadow: 0 18px 40px -28px rgba(26, 26, 24, 0.4);
 }
 .work-shot img {
+  display: block;
   width: 100%;
+  height: auto;
   aspect-ratio: 16 / 9;
   object-fit: cover;
   transition: transform 0.7s var(--ease);
