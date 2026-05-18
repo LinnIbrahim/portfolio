@@ -67,8 +67,9 @@ export const profile = {
         'Led integration of deep neural networks into a production data pipeline, lifting processing accuracy from 90% to 98% and enabling real-time analytics over 10+ TB point-cloud datasets. Containerised a C++ / CMake PyTorch classification model with Docker.',
       tags: ['Python', 'PyTorch', 'Docker', 'Data Pipelines'],
       featured: false,
-      image: '/work/pointcloud.svg',
-      imageAlt: 'Point-Cloud AI Pipeline — noisy data resolving into a classified signal',
+      image: '/work/kapernikov.jpg',
+      imageAlt:
+        'RGB-classified LiDAR point cloud of a railway corridor, rendered in the Entwine EPT viewer',
     },
   ],
 
