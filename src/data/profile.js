@@ -57,8 +57,8 @@ export const profile = {
         'An open-source platform making small, easily-overlooked businesses visible on the map. The aggregate favours the chains; FindAnything is built so the corner shop shows up too — mapping integration, containerised, and community-run.',
       tags: ['Docker', 'Kubernetes', 'OpenStreetMap', 'Open Source'],
       featured: false,
-      image: '/work/findanything.svg',
-      imageAlt: 'FindAnything — one small business made visible on a quiet map',
+      image: '/work/findanything.jpg',
+      imageAlt: 'FindAnything landing page — “Find Anything Near You” over an interactive map of New York with a single business pinned',
     },
     {
       title: 'Echo',
